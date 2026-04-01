@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sem vergonha, sem desculpa — por Loany</title>
+<meta name="description" content="O guia para a mulher que quer empreender online, sabe que é capaz — e ainda não começou.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #f5f0e8;
+    --cream-dark: #ede8de;
+    --charcoal: #1e1a14;
+    --charcoal-mid: #3a3530;
+    --muted: #6b6155;
+    --subtle: #9a9080;
+    --border: #d4cdc0;
+    --accent: #1e1a14;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    letter-spacing: 0.05em;
+  }
+
+  /* HERO */
+  .hero {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    margin-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .divider {
+    width: 40px;
+    height: 0.5px;
+    background: var(--border);
+    margin: 2rem auto;
+  }
+
+  .hero-body {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--charcoal-mid);
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .hero-body p + p { margin-top: 1.25rem; }
+
+  /* SECTIONS */
+  .section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    border-top: 0.5px solid var(--border);
+  }
+
+  .section-tag {
+    display: block;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    margin-bottom: 1.25rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title em { font-style: italic; font-weight: 300; }
+
+  .body-text {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--charcoal-mid);
+    margin-bottom: 1.25rem;
+  }
+
+  /* CHECKLIST */
+  .checklist {
+    list-style: none;
+    margin: 1.5rem 0;
+  }
+
+  .checklist li {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--charcoal-mid);
+    padding: 0.85rem 0 0.85rem 1.5rem;
+    border-bottom: 0.5px solid var(--border);
+    position: relative;
+  }
+
+  .checklist li:first-child { border-top: 0.5px solid var(--border); }
+
+  .checklist li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--subtle);
+    font-weight: 300;
+  }
+
+  /* PULLQUOTE */
+  .pullquote {
+    border-left: 1.5px solid var(--border);
+    padding: 0.75rem 0 0.75rem 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .pullquote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--charcoal-mid);
+  }
+
+  /* DARK SECTION */
+  .section-dark {
+    background: var(--charcoal);
+    padding: 5rem 2rem;
+  }
+
+  .section-dark-inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .section-dark .section-tag { color: rgba(245,240,232,0.35); }
+  .section-dark .section-title { color: #f5f0e8; }
+  .section-dark .section-title em { color: rgba(245,240,232,0.7); }
+  .section-dark .body-text { color: rgba(245,240,232,0.65); }
+  .section-dark .pullquote { border-left-color: rgba(245,240,232,0.2); }
+  .section-dark .pullquote p { color: rgba(245,240,232,0.8); }
+
+  /* PRICE */
+  .price-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    border-top: 0.5px solid var(--border);
+    text-align: center;
+  }
+
+  .price-block {
+    max-width: 420px;
+    margin: 0 auto;
+    border: 0.5px solid var(--border);
+    border-radius: 2px;
+    padding: 3rem 2rem;
+  }
+
+  .price-de {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--subtle);
+    text-decoration: line-through;
+    margin-bottom: 0.5rem;
+  }
+
+  .price-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .price-desc {
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-btn {
+    display: block;
+    width: 100%;
+    background: var(--charcoal);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1.1rem 2rem;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    margin-bottom: 1rem;
+  }
+
+  .cta-btn:hover { opacity: 0.8; }
+
+  .price-nota {
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--subtle);
+    letter-spacing: 0.05em;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 2.5rem 2rem;
+    border-top: 0.5px solid var(--border);
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--subtle);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-legal {
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--subtle);
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-tag, .hero-title, .hero-sub, .hero-body {
+    animation: fadeUp 0.8s ease forwards;
+  }
+
+  .hero-tag { animation-delay: 0.1s; opacity: 0; }
+  .hero-title { animation-delay: 0.25s; opacity: 0; }
+  .hero-sub { animation-delay: 0.4s; opacity: 0; }
+  .hero-body { animation-delay: 0.55s; opacity: 0; }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .hero { padding: 3.5rem 1.5rem 3rem; }
+    .section { padding: 3rem 1.5rem; }
+    .price-section { padding: 3rem 1.5rem; }
+    .section-dark { padding: 3.5rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">por Loany</span>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-tag">e-book · guia para mulheres</span>
+  <h1 class="hero-title">Sem vergonha,<br><em>sem desculpa.</em></h1>
+  <p class="hero-sub">O guia para a mulher que quer empreender online, sabe que é capaz — e ainda não começou.</p>
+  <div class="divider"></div>
+  <div class="hero-body">
+    <p>Você já pensou em empreender. Já pesquisou. Já salvou post, assistiu vídeo, anotou ideia. Mas na hora de começar de verdade, algo trava. O medo do julgamento. A sensação de não estar pronta. A dúvida se vai dar certo.</p>
+    <p>Esse e-book foi escrito pra você. Não por uma guru com fórmula mágica — mas por uma mulher que começou do zero, sem plano, no meio de uma pandemia, e encontrou o caminho enquanto andava.</p>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="section">
+  <span class="section-tag">esse e-book é pra você se...</span>
+  <ul class="checklist">
+    <li>Você quer empreender online mas não sabe por onde começar</li>
+    <li>Você tem medo do que as pessoas vão pensar se você tentar</li>
+    <li>Você já começou algo mas travou no meio do caminho</li>
+    <li>Você sente que a vida tá passando e você ainda tá no mesmo lugar</li>
+    <li>Você quer uma renda própria mas acha que não tem experiência suficiente</li>
+  </ul>
+</section>
+
+<!-- SOBRE A AUTORA -->
+<section class="section">
+  <span class="section-tag">quem escreveu</span>
+  <h2 class="section-title">Uma história <em>real.</em></h2>
+  <p class="body-text">Filha de pedreiro e auxiliar de serviços gerais, criada numa cidade de 10 mil habitantes, Loany saiu do interior em busca de uma vida melhor. Trabalhava com eventos no Rio de Janeiro quando a pandemia chegou e derrubou tudo.</p>
+  <p class="body-text">Sem reserva, sem plano, e com muito medo — ela começou a buscar oportunidades online. Uma foi levando à outra. Hoje tem um negócio próprio, uma equipe, e reformou a casa onde seus pais moram.</p>
+  <div class="pullquote">
+    <p>"Não comecei porque fui corajosa. Comecei porque precisava pagar as contas. O resto veio no caminho."</p>
+  </div>
+</section>
+
+<!-- O QUE ESTÁ DENTRO -->
+<section class="section">
+  <span class="section-tag">o que está dentro</span>
+  <h2 class="section-title">8 capítulos <em>direto ao ponto.</em></h2>
+  <ul class="checklist">
+    <li>A história real de quem começou do zero — sem plano, sem dinheiro, na pandemia</li>
+    <li>Por que a vergonha é o maior obstáculo — e como ir em frente mesmo com ela</li>
+    <li>A mentalidade que separa quem encontra oportunidades de quem espera por elas</li>
+    <li>Como comunicar sua ideia pra atrair as pessoas certas — sem ser vendedora nata</li>
+    <li>Por que você não precisa de dinheiro pra começar — e o que fazer antes de investir</li>
+    <li>Os erros que travam 90% das mulheres — e como não cair nessas armadilhas</li>
+    <li>Como construir autoridade sem precisar ser especialista</li>
+    <li>O que fazer amanhã de manhã pra mudar onde você vai estar daqui a 5 anos</li>
+  </ul>
+</section>
+
+<!-- DARK SECTION - FECHO EMOCIONAL -->
+<section class="section-dark">
+  <div class="section-dark-inner">
+    <span class="section-tag">uma última coisa</span>
+    <h2 class="section-title">O tempo vai passar <em>de qualquer forma.</em></h2>
+    <p class="body-text">Daqui a 5 anos você vai estar em algum lugar. A diferença é o que você faz enquanto o tempo passa.</p>
+    <p class="body-text">Esse e-book não é uma fórmula mágica. É um empurrão honesto de quem já esteve onde você está agora — e decidiu que o tempo ia passar do seu lado, não sem ela.</p>
+    <div class="pullquote">
+      <p>"Independente de qual seja a sua realidade hoje, você tem o poder de decidir como vai estar daqui a cinco anos."</p>
+    </div>
+  </div>
+</section>
+
+<!-- PREÇO -->
+<section class="price-section">
+  <span class="section-tag">garanta o seu</span>
+  <div class="price-block">
+    <p class="price-de">de R$ 57</p>
+    <p class="price-value">R$ 37</p>
+    <p class="price-desc">pagamento único · acesso imediato</p>
+    <a href="COLE_AQUI_O_LINK_DA_KIWIFY" class="cta-btn">quero meu e-book agora</a>
+    <p class="price-nota">conforme o Código de Defesa do Consumidor, você tem 7 dias para solicitar reembolso caso não fique satisfeita.</p>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">por Loany</span>
+  <p class="footer-legal">© 2025 · Sem vergonha, sem desculpa<br>todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
